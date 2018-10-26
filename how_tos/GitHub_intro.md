@@ -73,5 +73,61 @@ nothing to commit, working tree clean
 - `git push origin <branch name>`: pushes branch to repository. Go online to decide whether to merge new branch to master if you have the permission to.
 - `git checkout <branch name`: allows you to switch between branches
 
+example:
+```
+➜  fakerepo git:(master) touch kalani.txt
+➜  fakerepo git:(master) ✗ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	kalani.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  fakerepo git:(master) ✗ git checkout -b 20181025_branch
+Switched to a new branch '20181025_branch'
+➜  fakerepo git:(20181025_branch) ✗ git branch
+* 20181025_branch
+  master
+➜  fakerepo git:(20181025_branch) ✗ git status
+On branch 20181025_branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	kalani.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  fakerepo git:(20181025_branch) ✗ git add kalani.txt
+➜  fakerepo git:(20181025_branch) ✗ git status
+On branch 20181025_branch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   kalani.txt
+
+➜  fakerepo git:(20181025_branch) ✗ git commit -m "branch practice"
+[20181025_branch e119344] branch practice
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 kalani.txt
+➜  fakerepo git:(20181025_branch) git push origin 20181025_branch
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 273 bytes | 273.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for '20181025_branch' on GitHub by visiting:
+remote:      https://github.com/kalanir/fakerepo/pull/new/20181025_branch
+remote:
+To https://github.com/kalanir/fakerepo.git
+ * [new branch]      20181025_branch -> 20181025_branch
+➜  fakerepo git:(20181025_branch) git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+➜  fakerepo git:(master) git checkout 20181025_branch
+Switched to branch '20181025_branch'
+```
 ## I want to merge my branch to origin/master
 - Go online and you will see a merge request
