@@ -1,9 +1,12 @@
 # Intro to GitHub
 
 ## I want to create a new repository
+Manually go onto your profile, click the + button at the top right, and click either import or create new repository. We generally have been adding the MIT license to our public repositories (cupcakes and coding).
 
-## I want to clone a repository
+## I want to clone a repository and/or update
 Cloning means:
+- `git clone <https://github.com/username/example.git>`: you can find url on the repository you want to clone's home page. Click the green button that says "Clone or download" to do this
+- `git pull origin master`: updates your local clone copy. perform this command while in your local clone folder
 
 ## I want to make changes to a repository locally, and push them to my origin/master repository
 
@@ -11,7 +14,7 @@ Cloning means:
 - `git add .`: start adding changes to the repository. You can add specific files but replacing . with the file. to undo this, `git reset` will undo changes
 - `git status`: will tell you if changes have been staged - currently a git add does not make permanent changes
 - `git commit -m "any message"`: commit these changes to your repository
-- `git status`: at this point it should say your working directory is clean
+- `git push`: commit to remote repository
 
 example workflow:
 ```
@@ -62,7 +65,13 @@ nothing to commit, working tree clean
 ```
 
 
-
 ## I want to make a branch off of a repository, and make changes, and push that branch
+- `git checkout -b <branch name>`: creates a new branch and switches to that branch. you should be able to see a change in the path you are working in.
+- `git status`: see if there are files to commit that are not on the branch
+- `git add .` or `git add <file name>`: to start adding changes to branch
+- `git commit -m "message"`: to commit changes to branch
+- `git push origin <branch name>`: pushes branch to repository. Go online to decide whether to merge new branch to master if you have the permission to.
+- `git checkout <branch name`: allows you to switch between branches
 
 ## I want to merge my branch to origin/master
+- Go online and you will see a merge request
