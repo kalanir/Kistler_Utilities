@@ -6,7 +6,7 @@ Manually go onto your profile, click the + button at the top right, and click ei
 ## I want to clone a repository and/or update
 Cloning means:
 - `git clone <https://github.com/username/example.git>`: you can find url on the repository you want to clone's home page. Click the green button that says "Clone or download" to do this
-- `git pull origin master`: updates your local clone copy. perform this command while in your local clone folder
+- `git pull origin master`: updates your local clone copy and deleting all the changes you made but didn't commit. perform this command while in your local clone folder. `git fetch origin`: is less aggressive and will update your file with updates remote changes, without deleting the ones you've made
 
 ## I want to make changes to a repository locally, and push them to my origin/master repository
 
@@ -131,3 +131,4 @@ Switched to branch '20181025_branch'
 ```
 ## I want to merge my branch to origin/master
 - Go online and you will see a merge request
+- command line methods to do this, will post later
